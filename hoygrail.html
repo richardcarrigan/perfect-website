@@ -45,36 +45,18 @@
     <link rel="manifest" href="manifest.json">
   </head>
 
-  <!-- all visible page content goes in the body -->
+  <!-- Holy grail layout: https://web.dev/patterns/layout/holy-grail/ -->
   <body>
-    <!-- semantic HTML elements should always be preferred over non-semantic elements (i.e. `div` and `span`) -->
-    <header>
-      <h1>The Perfect Website</h1>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/hoygrail.html">Holy Grail Layout</a>
-      </nav>
-    </header>
+    <header>Header</header>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/hoygrail.html">Holy Grail Layout</a>
+    </nav>
     <main>
-      <header>
-        <h1>Home Page</h1>
-      </header>
-      <section id="section1">
-        <h2>Section 1</h2>
-        <p>forty-six words</p>
-        <p>forty-four words</p>
-      </section>
-      <section id="section2">
-        <h2>Section 2</h2>
-        <p>sixty-eight words</p>
-        <p>forty-four words</p>
-      </section>
+      <article>First post</article>
+      <article>Second post</article>
     </main>
-    <footer>
-      <p>&copy;2022 Richard Carrigan. All rights reserved.</p>
-      <address><a href="https://www.richardcarrigan.dev">Richard Carrigan</a></address>
-    </footer>
-
-    <!-- <script defer src="scripts/lightswitch.js"></script> -->
+    <aside>Aside</aside>
+    <footer>Footer</footer>
   </body>
 </html>
