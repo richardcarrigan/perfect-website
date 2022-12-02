@@ -45,17 +45,18 @@
     <link rel="manifest" href="manifest.json">
   </head>
 
+  <!-- This page uses the 'Holy Grail Layout' pattern, as described here: https://web.dev/patterns/layout/holy-grail/ -->
+
   <!-- all visible page content goes in the body -->
   <body>
     <!-- semantic HTML elements should always be preferred over non-semantic elements (i.e. `div` and `span`) -->
-    <header>
+    <header class="section coral">
       <h1>The Perfect Website</h1>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/hoygrail.html">Holy Grail Layout</a>
-      </nav>
     </header>
-    <main>
+    <nav class="section blue">
+      <a href="/">Home</a>
+    </nav>
+    <main class="section green">
       <header>
         <h1>Home Page</h1>
       </header>
@@ -70,7 +71,8 @@
         <p>forty-four words</p>
       </section>
     </main>
-    <footer>
+    <aside class="section yellow">Aside</aside>
+    <footer class="section coral">
       <p>&copy;2022 Richard Carrigan. All rights reserved.</p>
       <address><a href="https://www.richardcarrigan.dev">Richard Carrigan</a></address>
     </footer>

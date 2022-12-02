@@ -1,0 +1,68 @@
+:root {
+  --blue: hsl(200, 100%, 90%);
+  --blue--b: hsl(200, 100%, 80%);
+  --coral: hsl(300, 100%, 93%);
+  --coral--b: hsl(280, 100%, 70%);
+  --green: hsl(113, 85%, 95%);
+  --green--b: hsl(84, 71%, 53%);
+  --yellow: hsl(30, 100%, 93%);
+  --yellow--b: hsl(40, 100%, 80%);
+}
+
+/* Reset styles */
+body {
+  margin: 0;
+}
+/* end reset styles */
+
+body {
+  display: grid;
+  grid-template: auto 1fr auto / auto 1fr auto;
+  min-height: 100vh;
+}
+
+header {
+  grid-column: 1 / 4;
+}
+
+nav {
+  grid-column: 1 / 2;
+}
+
+main {
+  grid-column: 2 / 3;
+}
+
+aside {
+  grid-column: 3 / 4;
+}
+
+footer {
+  grid-column: 1 / 4;
+}
+
+.blue {
+  background-color: var(--blue);
+  border: 1px solid var(--blue--b);
+}
+
+.coral {
+  background-color: var(--coral);
+  border: 1px solid var(--coral--b);
+}
+
+.green {
+  background-color: var(--green);
+  border: 1px solid var(--green--b);
+}
+
+.section {
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-style: dashed;
+}
+
+.yellow {
+  background-color: var(--yellow);
+  border: 1px solid var(--yellow--b);
+}
