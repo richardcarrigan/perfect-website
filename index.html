@@ -1,48 +1,83 @@
 <!-- including the doctype tells browsers to use standards mode instead of quirks mode -->
 <!DOCTYPE html>
 <!-- all content, including page metadata, should be contained within the HTML tags -->
-<html lang="en-US">
+<html lang="en" dir="ltr">
   <!-- metadata, such as title and author, as well as links to external resources like stylesheets, goes in the `head` -->
   <head>
     <!-- character encoding required by HTML5. Browser default is `windows-1252` -->
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
 
     <!-- `title` is displayed in browser tab, open window list, history, search results, and social media cards (unless redefined in meta tags) -->
     <title>The Perfect Website</title>
 
     <!-- prevents page from being resized based on device screen size -->
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width" />
 
     <!-- provides an SEO-friendly description of the site -->
-    <meta name="description" content="Check out the source code for this site to see a model example of how websites should be built">
+    <meta
+      name="description"
+      content="Check out the source code for this site to see a model example of how websites should be built"
+    />
 
     <!-- useful for coloring the browser interface (title bar, tab bars, etc.). Especially useful for PWAs -->
-    <meta name="theme-color" content="#226DAA">
+    <meta name="theme-color" content="#226DAA" />
 
     <!-- Facebook Open Graph metadata for social media cards when links are posted -->
-    <meta property="og:title" content="The Perfect Website">
-    <meta property="og:description" content="A Model Example of How Websites Should be Built">
-    <meta property="og:image" content="http://127.0.0.1:5500/images/screenshot.jpeg">
-    <meta property="og:image:alt" content="Screenshot of the website landing page">
+    <meta property="og:title" content="The Perfect Website" />
+    <meta
+      property="og:description"
+      content="A Model Example of How Websites Should be Built"
+    />
+    <meta
+      property="og:image"
+      content="http://127.0.0.1:5500/images/screenshot.jpeg"
+    />
+    <meta
+      property="og:image:alt"
+      content="Screenshot of the website landing page"
+    />
 
     <!-- Twitter social media card markup -->
-    <meta name="twitter:title" content="The Perfect Website">
-    <meta name="twitter:description" content="A Model Example of How Websites Should be Built">
-    <meta name="twitter:url" content="http://127.0.0.1:5500/?src=twitter">
-    <meta name="twitter:image:src" content="http://127.0.0.1:5500/images/screenshot.jpeg">
-    <meta name="twitter:image:alt" content="Screenshot of the website landing page">
-    <meta name="twitter:creator" content="@Rich_Carrigan">
+    <meta name="twitter:title" content="The Perfect Website" />
+    <meta
+      name="twitter:description"
+      content="A Model Example of How Websites Should be Built"
+    />
+    <meta name="twitter:url" content="http://127.0.0.1:5500/?src=twitter" />
+    <meta
+      name="twitter:image:src"
+      content="http://127.0.0.1:5500/images/screenshot.jpeg"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Screenshot of the website landing page"
+    />
+    <meta name="twitter:creator" content="@Rich_Carrigan" />
 
     <!-- link to external CSS file -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css" />
 
     <!-- direct browser to favicon files -->
-    <link rel="icon" sizes="16x16" type="image/png" href="images/favicon-16x16.png">
-    <link rel="icon" sizes="32x32" type="image/png" href="images/favicon-32x32.png">
-    <link rel="icon" sizes="48x48" href="images/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link
+      rel="icon"
+      sizes="16x16"
+      type="image/png"
+      href="images/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      sizes="32x32"
+      type="image/png"
+      href="images/favicon-32x32.png"
+    />
+    <link rel="icon" sizes="48x48" href="images/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
 
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="manifest.json" />
   </head>
 
   <!-- This page uses the 'Holy Grail Layout' pattern, as described here: https://web.dev/patterns/layout/holy-grail/ -->
@@ -51,11 +86,48 @@
   <body>
     <!-- semantic HTML elements should always be preferred over non-semantic elements (i.e. `div` and `span`) -->
     <header class="section coral">
+      <a
+        href="#sidenav-open"
+        id="sidenav-button"
+        class="hamburger"
+        title="Open Menu"
+        aria-label="Open Menu"
+      >
+        <svg
+          viewBox="0 0 50 40"
+          role="presentation"
+          focusable="false"
+          aria-label="trigram for heaven symbol"
+        >
+          <line x1="0" x2="100%" y1="10%" y2="10%"></line>
+          <line x1="0" x2="100%" y1="50%" y2="50%"></line>
+          <line x1="0" x2="100%" y1="90%" y2="90%"></line>
+        </svg>
+      </a>
       <h1>The Perfect Website</h1>
     </header>
-    <nav class="section blue">
-      <a href="/">Home</a>
-    </nav>
+    <aside id="sidenav-open" class="section blue">
+      <nav>
+        <h4>My</h4>
+        <a href="#">Dashboard</a>
+        <a href="#">Profile</a>
+        <a href="#">Preferences</a>
+        <a href="#">Archive</a>
+        <h4>Settings</h4>
+        <a href="#">Accessibility</a>
+        <a href="#">Theme</a>
+        <a href="#">Admin</a>
+      </nav>
+      <a
+        href="#"
+        id="sidenav-close"
+        title="Close Menu"
+        aria-label="Close Menu"
+        onchange="history.go(-1)"
+      >
+        Close
+      </a>
+    </aside>
     <main class="section green">
       <header>
         <h1>Home Page</h1>
@@ -74,9 +146,11 @@
     <aside class="section yellow">Aside</aside>
     <footer class="section coral">
       <p>&copy;2022 Richard Carrigan. All rights reserved.</p>
-      <address><a href="https://www.richardcarrigan.dev">Richard Carrigan</a></address>
+      <address>
+        <a href="https://www.richardcarrigan.dev">Richard Carrigan</a>
+      </address>
     </footer>
 
-    <!-- <script defer src="scripts/lightswitch.js"></script> -->
+    <script defer src="scripts/script.js"></script>
   </body>
 </html>
